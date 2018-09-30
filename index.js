@@ -10,7 +10,7 @@ handle = (req, res) => res.end("hit");
 
 server = http.createServer(handle);
 
-server.listen, process.env.PORT || 5000
+server.listen(process.env.PORT, '0.0.0.0')
 
 fs.readdir("commands/", (err, files) => {
 
