@@ -4,9 +4,9 @@ const fs = require("fs");
 const bot = new Discord.Client({disableEveryone: true});
 bot.commands = new Discord.Collection();
 let coins = require("./coins.json");
-http = require('http');
+const http = require("http");
 
-handle = (req, res) -> res.end "hit"
+handle = (req, res) -> res.end("hit");
 
 server = http.createServer(handle);
 
