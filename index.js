@@ -6,6 +6,8 @@ bot.commands = new Discord.Collection();
 let coins = require("./coins.json");
 http = require('http');
 
+handle = (req, res) -> res.end "hit"
+
 server = http.createServer(handle);
 
 server.listen, process.env.PORT || 5000
