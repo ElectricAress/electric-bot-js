@@ -4,8 +4,14 @@ const fs = require("fs");
 const bot = new Discord.Client({disableEveryone: true});
 bot.commands = new Discord.Collection();
 let coins = require("./coins.json");
+http = require('http');
+handle = (req, res) = res.end("hit");
 
-fs.readdir("./commands/", (err, files) => {
+server = http.createServer(handle);
+
+server.listen, process.env.PORT || 5000
+
+fs.readdir("commands/", (err, files) => {
 
   if(err) console.log(err);
 
