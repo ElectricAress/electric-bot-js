@@ -4,11 +4,12 @@ const fs = require("fs");
 const bot = new Discord.Client({disableEveryone: true});
 bot.commands = new Discord.Collection();
 let coins = require("./coins.json");
-http = require('http');
+const fastify = require("fastify")
 
-server = http.createServer();
-
-server.listen, process.env.PORT || 5000
+fastify.listen(process.env.PORT || 3000, function (err) {
+  if (err) throw err
+  console.log(`Server listening on ${fastify.server.address().port}`)
+})
 
 fs.readdir("commands/", (err, files) => {
 
