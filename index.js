@@ -4,7 +4,9 @@ const fs = require("fs");
 const bot = new Discord.Client({disableEveryone: true});
 bot.commands = new Discord.Collection();
 let coins = require("./coins.json");
-const fastify = require("fastify")
+const fastify = require('fastify')({
+  logger: true
+})
 
 fastify.listen(process.env.PORT || 3000, function (err) {
   if (err) throw err
