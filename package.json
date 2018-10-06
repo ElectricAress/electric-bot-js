@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "discord.js": "^11.4.2",
+    "fastify": "^1.12.1",
     "fortnite": "^4.1.1",
     "http": "0.0.0",
     "ms": "^2.1.1",
