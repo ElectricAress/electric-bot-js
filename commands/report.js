@@ -14,7 +14,7 @@ module.exports.run = async (bot, message, args) => {
   .addField("Czas", message.createdAt)
   .addField("Powód", reason);
 
-  let repchannel = message.guild.channels.find(`name`, "sala-chwały");
+  let repchannel = message.guild.channels.find(`name`, "reporty");
   if(!repchannel) return message.channel.send("Nie znaleziono kanału!");
 
   message.delete(1).catch(O_o=>{});
